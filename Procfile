@@ -1,1 +1,1 @@
-web: java -cp target/classes:target/dependency/* com.ianchouinard.computermonitorservice
+web: java -cp target/classes:target/dependency/* com.ianchouinard.computermonitorservice.Main
