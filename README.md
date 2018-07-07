@@ -4,7 +4,7 @@ A basic java web api and angular app to test making a basic web api with java.
 Java web api built with Jersey and Grizzley
 
 ## App Overview
-This app exposes a few cpu and memory based stats via a Java web api and renders them in a small Angular (v6) app.
+This app exposes a few cpu and memory based stats of the host system via a Java web api and renders them in a small Angular (v6) app.
 
 ### Screenshot of app
 ![Alt text](https://raw.githubusercontent.com/ianchouinard/CpuMonitorApplet/master/ScreenShot.PNG "Screenshot")
