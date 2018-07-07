@@ -23,7 +23,7 @@ public class Main {
         }
 
         String port = System.getenv("PORT");
-        String protocol = "https://";
+        String protocol = "http://";
         
         if (port == null) {
             port = ":8080";
