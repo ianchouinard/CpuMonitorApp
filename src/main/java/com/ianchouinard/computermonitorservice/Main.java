@@ -14,19 +14,30 @@ import org.glassfish.grizzly.http.server.StaticHttpHandler;
  */
 public class Main {
     // Base URI the Grizzly HTTP server will listen on
-    // public static final String BASE_URI = "http://localhost:8080/api/";
     
-    public static String BASE_URI = System.getenv("PORT");
+    public static String createBaseUri() {
+        String hostname = System.getenv("HOSTNAME");
+        
+        if (hostname == null) {
+            hostname = "localhost";
+        }
 
+        String port = System.getenv("PORT");
+        String protocol = "https://";
+        
+        if (port == null) {
+            port = ":8080";
+            protocol = "http://";
+        }
+
+        return (protocol + hostname + port + "/api/");
+    }
+    
     /**
      * Starts Grizzly HTTP server exposing JAX-RS resources defined in this application.
      * @return Grizzly HTTP server.
      */
-     public static HttpServer startServer() {
-         
-        if (BASE_URI == null || BASE_URI.isEmpty()) {
-            BASE_URI = "http://localhost:8080/api/";
-        }
+     public static HttpServer startServer(String uri) {
          
         // create a resource config that scans for JAX-RS resources and providers
         // in testian package
@@ -34,7 +45,7 @@ public class Main {
 
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
-        return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
+        return GrizzlyHttpServerFactory.createHttpServer(URI.create(uri), rc);
     }
 
     /**
@@ -43,12 +54,13 @@ public class Main {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        final HttpServer server = startServer();
+        final String uri = createBaseUri();
+        final HttpServer server = startServer(uri);
         
         server.getServerConfiguration().addHttpHandler(new StaticHttpHandler("src/main/webapp"), "/");;  
         
         System.out.println(String.format("Jersey app started with WADL available at "
-                + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));
+                + "%sapplication.wadl\nHit enter to stop it...", uri));
         System.in.read();
         server.stop();
     }
