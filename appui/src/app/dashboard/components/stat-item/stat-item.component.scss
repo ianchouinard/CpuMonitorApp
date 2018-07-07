@@ -1,0 +1,18 @@
+.stat-item {
+    padding: 10px;
+
+    .label {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .value {
+        font-size: 26px;
+        font-weight: 300;
+
+        .unit {
+            font-size: 17px;
+        }
+    }
+
+}
