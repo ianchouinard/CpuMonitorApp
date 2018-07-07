@@ -11,9 +11,11 @@ export class DashboardComponent implements OnInit {
 
   public cpuStatus: CpuStatusModel;
   public ready: boolean;
+  public refreshRate: number;
 
   constructor(public monitorService: MonitorService) { 
     this.cpuStatus = <CpuStatusModel>{};
+    this.refreshRate = 1500;
   }
 
   ngOnInit() {
@@ -26,6 +28,10 @@ export class DashboardComponent implements OnInit {
 
   cpuLoad(): string {
     return (this.cpuStatus.cpuLoad * 100).toFixed(2);
+  }
+
+  updateRefreshRate(rate) {
+    this.refreshRate = rate;
   }
 
   private loadData() {
@@ -49,7 +55,7 @@ export class DashboardComponent implements OnInit {
   private rePoll() {
     setTimeout(() => {
       this.loadData();
-    }, 1000);
+    }, this.refreshRate);
   }
 
 }

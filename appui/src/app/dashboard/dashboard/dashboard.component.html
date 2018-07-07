@@ -1,9 +1,10 @@
 
 
-<mat-card class="dashboard-card" >
+<mat-card class="dashboard-card" *ngIf="ready">
   <mat-card-header>
     <mat-card-title>System: {{ cpuStatus.operatingSystem }}</mat-card-title>
     <mat-card-subtitle>Architecture: {{ cpuStatus.architecture }}</mat-card-subtitle>
+    <cpumonitor-refresh-rate class="refresh-rate" [rate]="refreshRate" (rateChangeEvent)="updateRefreshRate($event)"></cpumonitor-refresh-rate>
   </mat-card-header>
 
   <mat-divider></mat-divider>
@@ -29,3 +30,5 @@
   </div>
 
 </mat-card>
+
+<mat-progress-bar mode="indeterminate" *ngIf="!ready"></mat-progress-bar>
