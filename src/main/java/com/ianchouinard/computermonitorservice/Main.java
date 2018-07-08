@@ -13,7 +13,6 @@ import org.glassfish.grizzly.http.server.StaticHttpHandler;
  *
  */
 public class Main {
-    // Base URI the Grizzly HTTP server will listen on
     
     public static String createBaseUri() {
         String hostname = System.getenv("HOSTNAME");
@@ -33,26 +32,12 @@ public class Main {
         return (protocol + hostname + port + "/api/");
     }
     
-    /**
-     * Starts Grizzly HTTP server exposing JAX-RS resources defined in this application.
-     * @return Grizzly HTTP server.
-     */
      public static HttpServer startServer(String uri) {
-         
-        // create a resource config that scans for JAX-RS resources and providers
-        // in testian package
         final ResourceConfig rc = new ResourceConfig().packages("com.ianchouinard.computermonitorservice");
 
-        // create and start a new instance of grizzly http server
-        // exposing the Jersey application at BASE_URI
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(uri), rc);
     }
 
-    /**
-     * Main method.
-     * @param args
-     * @throws IOException
-     */
     public static void main(String[] args) throws IOException {
         final String uri = createBaseUri();
         final HttpServer server = startServer(uri);
