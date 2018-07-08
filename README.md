@@ -1,7 +1,7 @@
 # Cpu Monitor Applet
 A basic java web api and angular app to test making a basic web api with java.
 
-Java web api built with Jersey and Grizzley
+Java web api built using the Jersey framework.
 
 ## App Overview
 This app exposes a few cpu and memory based stats of the host system via a Java web api and renders them in a small Angular (v6) app.
