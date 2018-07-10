@@ -31,7 +31,7 @@ describe('MonitorService', () => {
       expect(data.timestamp).toBeDefined();
     });
 
-    const req = httpMock.expectOne('http://localhost:8080/myapp/cpumonitorresource');
+    const req = httpMock.expectOne('http://localhost:8080/api/cpumonitorresource');
     expect(req.request.method).toEqual('GET');
 
     const testData:CpuStatusModel = {

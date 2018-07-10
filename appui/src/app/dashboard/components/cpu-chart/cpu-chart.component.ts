@@ -17,7 +17,7 @@ export class CpuChartComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
     const ctx = this.cpuChartDiv.nativeElement;
     this.chartObject = new Chart(ctx, {
       type: 'line',
@@ -50,7 +50,7 @@ export class CpuChartComponent implements OnInit {
     });
   }
 
-  ngDoCheck() {
+  public ngDoCheck() {
     this.chartObject.update();
   }
 

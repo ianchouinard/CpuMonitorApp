@@ -18,19 +18,19 @@ export class DashboardComponent implements OnInit {
     this.refreshRate = 1500;
   }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.loadData();
   }
 
-  availableMemory(): number {
+  public availableMemory(): number {
     return this.cpuStatus.totalMemoryGB - this.cpuStatus.totalFreeMemoryGB;
   }
 
-  cpuLoad(): string {
+  public cpuLoad(): string {
     return (this.cpuStatus.cpuLoad * 100).toFixed(2);
   }
 
-  updateRefreshRate(rate) {
+  public updateRefreshRate(rate) {
     this.refreshRate = rate;
   }
 
@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit {
       .subscribe(
         result => (data = result),
         err => {
-          console.log(err);
+          // handled by intercepter
         },
         () => {
           this.cpuStatus = data;

@@ -18,7 +18,7 @@ export class MonitorChartComponent implements OnInit, DoCheck {
 
   constructor() { }
 
-  ngOnInit() {
+  public ngOnInit() {
     const ctx = this.chartDiv.nativeElement;
     this.chartObject = new Chart(ctx, {
       type: 'line',
@@ -57,7 +57,7 @@ export class MonitorChartComponent implements OnInit, DoCheck {
     });
   }
 
-  ngDoCheck() {
+  public ngDoCheck() {
     this.chartObject.update();
   }
 

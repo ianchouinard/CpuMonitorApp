@@ -16,10 +16,10 @@ public class CpuMonitorResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
-        MonitorService tstserve = new MonitorService();
-        tstserve.queryOSForStats();
+        MonitorService monitorService = new MonitorService();
+        monitorService.queryOSForStats();
         
-        String result = tstserve.getComputerUsageJSON().toString();
+        String result = monitorService.getComputerUsageJSON().toString();
         
         // return result;
         return Response.ok()

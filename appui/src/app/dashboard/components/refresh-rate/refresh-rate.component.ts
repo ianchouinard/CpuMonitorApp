@@ -14,7 +14,7 @@ export class RefreshRateComponent {
     this.rate = 2000;
   }
 
-  rateUpdate() {
+  public rateUpdate() {
     this.rateChangeEvent.emit(this.rate);
   }
 
