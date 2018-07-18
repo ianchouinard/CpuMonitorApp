@@ -2,7 +2,6 @@ import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { finalize, tap } from 'rxjs/operators';
-//import { ApiResponseWrapper } from '../../global/model/api-response-wrapper.model';
 
 @Injectable({
   providedIn: 'root',

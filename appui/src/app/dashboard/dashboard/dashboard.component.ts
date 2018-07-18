@@ -26,10 +26,6 @@ export class DashboardComponent implements OnInit {
     return this.cpuStatus.totalMemoryGB - this.cpuStatus.totalFreeMemoryGB;
   }
 
-  public cpuLoad(): string {
-    return (this.cpuStatus.cpuLoad * 100).toFixed(2);
-  }
-
   public updateRefreshRate(rate) {
     this.refreshRate = rate;
   }
