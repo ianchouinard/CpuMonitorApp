@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DashboardComponent } from './dashboard.component';
 import { MonitorService } from '../services/monitor.service';
-import { HttpClient, HttpHandler } from '../../../../node_modules/@angular/common/http';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;

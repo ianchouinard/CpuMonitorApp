@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { CpuStatusModel } from 'src/app/dashboard/models/cpu-status-model';
+import { CpuStatusModel } from './../models/cpu-status-model';
 
 @Injectable()
 export class MonitorService {

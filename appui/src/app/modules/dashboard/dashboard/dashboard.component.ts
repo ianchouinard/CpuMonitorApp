@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CpuStatusModel } from 'src/app/dashboard/models/cpu-status-model';
-import { MonitorService } from 'src/app/dashboard/services/monitor.service';
+import { CpuStatusModel } from './../models/cpu-status-model';
+import { MonitorService } from './../services/monitor.service';
 
 @Component({
   selector: 'cpumonitor-dashboard',
