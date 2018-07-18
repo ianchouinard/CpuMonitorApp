@@ -38,15 +38,6 @@ describe('DashboardComponent', () => {
     expect(output).toEqual(8);
   });
 
-  it('should have cpuLoad() return a valid number as a string', () => {
-    // Should be a percent conversion for cpuLoad
-    component.cpuStatus.cpuLoad = .25;
-
-    const output = component.cpuLoad();
-
-    expect(output).toEqual("25.00");
-  });
-
   it ('should have updateRefreshRate() update the refresh rate', () => {
     component.updateRefreshRate(7500);
 
