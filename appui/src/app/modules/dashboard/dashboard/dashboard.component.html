@@ -10,14 +10,14 @@
   <mat-divider></mat-divider>
 
   <div class="dashboard-content">
-    <div class="info">
+    <aside class="info">
         <cpumonitor-stat-item [label]="'CPU Load'" [value]="cpuStatus.cpuLoad | percent" [unit]="'%'"></cpumonitor-stat-item>
         <cpumonitor-stat-item [label]="'Total Memory'" [value]="cpuStatus.totalMemoryGB" [unit]="'GB'"></cpumonitor-stat-item>
         <cpumonitor-stat-item [label]="'Free Memory'" [value]="cpuStatus.totalFreeMemoryGB" [unit]="'GB'"></cpumonitor-stat-item>
         <cpumonitor-stat-item [label]="'Free Memory'" [value]="availableMemory()" [unit]="'GB'"></cpumonitor-stat-item>
-    </div>
+    </aside>
 
-    <div class="charts">
+    <section class="charts">
       <cpumonitor-cpu-chart
         [cpuLoadData]="monitorService.cpuLoadHistory"
         [times]="monitorService.timestampHistory"></cpumonitor-cpu-chart>
@@ -26,7 +26,7 @@
         [freeMemoryData]="monitorService.freeMemoryHistory" 
         [totalMemoryData]="monitorService.totalMemoryHistory" 
         [times]="monitorService.timestampHistory"></cpumonitor-monitor-chart>
-    </div>
+    </section>
   </div>
 
 </mat-card>
