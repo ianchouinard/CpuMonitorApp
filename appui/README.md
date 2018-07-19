@@ -1,6 +1,14 @@
 # ComputerMonitor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+To run the angular app locally run "ng serve" after "npm install" from this directory.
+
+Ng serve will currently serve the front end using a fake data generator. But it can also be enabled to use the Java api that is also in this repo.
+
+An example of this front end using the fake data generator can be viewed here...
+https://cpu-monitor-applet.herokuapp.com/
+
+** Note: the java server needs to be the api endpoint for the unit test for the dashboard.service to work.
+
 
 ## Main app component
 
