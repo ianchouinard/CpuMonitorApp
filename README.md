@@ -3,6 +3,9 @@ A basic java web api and angular app to test making a basic web api with java.
 
 Java web api built using the Jersey framework.
 
+An example of this front end using a fake data generator instead of the API can be viewed here...
+https://cpu-monitor-applet.herokuapp.com/
+
 ## App Overview
 This app exposes a few cpu and memory based stats of the host system via a Java web api and renders them in a small Angular (v6) app.
 
