@@ -14,6 +14,10 @@ This module handles the feature module routing. It also initializes code splitti
 
 Currently contains a generic interceptor to alert the user if any request fails. This could be expanded on to display different errors based on the error response, or re-route the user. If this project was using any sort of authentication, we could also use an interceptor to pass an auth token or something with each request.
 
+## pipes module "/src/app/modules/pipes/"
+
+This module declares and exports common pipes. This module gets imported to modules that need it (ex dashboard.module). Currently the only pipe in here is a transform to convert byte value to GB
+
 ## Dashboard module "/src/app/modules/dashboard/"
 
 Rundown of this example module

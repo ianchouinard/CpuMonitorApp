@@ -11,10 +11,10 @@
 
   <div class="dashboard-content">
     <aside class="info">
-        <cpumonitor-stat-item [label]="'CPU Load'" [value]="cpuStatus.cpuLoad | percent" [unit]="'%'"></cpumonitor-stat-item>
-        <cpumonitor-stat-item [label]="'Total Memory'" [value]="cpuStatus.totalMemoryGB" [unit]="'GB'"></cpumonitor-stat-item>
-        <cpumonitor-stat-item [label]="'Free Memory'" [value]="cpuStatus.totalFreeMemoryGB" [unit]="'GB'"></cpumonitor-stat-item>
-        <cpumonitor-stat-item [label]="'Free Memory'" [value]="availableMemory()" [unit]="'GB'"></cpumonitor-stat-item>
+        <cpumonitor-stat-item [label]="'CPU Load'" [value]="cpuStatus.cpuLoad | percent"></cpumonitor-stat-item>
+        <cpumonitor-stat-item [label]="'Total Memory'" [value]="cpuStatus.totalMemory | toGB" [unit]="'GB'"></cpumonitor-stat-item>
+        <cpumonitor-stat-item [label]="'Free Memory'" [value]="cpuStatus.totalFreeMemory | toGB" [unit]="'GB'"></cpumonitor-stat-item>
+        <cpumonitor-stat-item [label]="'Available Memory'" [value]="availableMemory()" [unit]="'GB'"></cpumonitor-stat-item>
     </aside>
 
     <section class="charts">

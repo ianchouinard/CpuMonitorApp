@@ -3,6 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { DashboardComponent } from './dashboard.component';
 import { MonitorService } from '../services/monitor.service';
 import { HttpClient, HttpHandler } from '@angular/common/http';
+import { ToGBPipe } from '../../pipes/to-gb.pipe';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -11,7 +12,7 @@ describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ],
+      declarations: [ DashboardComponent, ToGBPipe ],
       providers: [MonitorService, HttpClient, HttpHandler],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })

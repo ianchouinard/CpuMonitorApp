@@ -9,6 +9,7 @@ import { StatItemComponent } from './components/stat-item/stat-item.component';
 import { MonitorChartComponent } from './components/monitor-chart/monitor-chart.component';
 import { CpuChartComponent } from './components/cpu-chart/cpu-chart.component';
 import { RefreshRateComponent } from './components/refresh-rate/refresh-rate.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 const dashboardRoutes: Routes = [
   {
@@ -28,7 +29,8 @@ const dashboardRoutes: Routes = [
     MatListModule,
     MatDividerModule,
     MatSliderModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    PipesModule
   ],
   declarations: [DashboardComponent, StatItemComponent, MonitorChartComponent, CpuChartComponent, RefreshRateComponent],
   providers: [MonitorService]
