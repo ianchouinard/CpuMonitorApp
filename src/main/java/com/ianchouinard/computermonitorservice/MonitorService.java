@@ -57,7 +57,9 @@ public class MonitorService {
     }
     
     private static long byteToGB(long byteValue) {
-        return byteValue / 1073741824;
+        // Convert to double to we can round uo to get the correct GB value.
+        double converted = (byteValue / (double)1073741824);
+        return (long)Math.ceil(converted);
     }
     
 }
