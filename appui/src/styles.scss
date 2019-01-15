@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.dashboard-card {
+    margin: 50px auto;
+    width: 95%;
+    max-width: 825px;
+}
+
+.mat-grid-tile .mat-figure {
+    justify-content: left;
+}
+
+.dashboard-content {
+    padding-top: 20px;
+    display: flex;
+}
