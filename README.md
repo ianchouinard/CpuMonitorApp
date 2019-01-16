@@ -1,5 +1,5 @@
 # Cpu Monitor
-An in progress self hosted web application to show cpu and memory usage and record stats in real time.
+An in progress self hosted web application to show cpu and memory usage (that is available through the JVM) and record stats in real time.
 
 ## App Overview
 Front end is currently being made with angular (v6) and the backend/api layer is being built with Spring Boot and MySQL.
