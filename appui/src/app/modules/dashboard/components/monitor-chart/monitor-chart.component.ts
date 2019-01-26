@@ -41,6 +41,7 @@ export class MonitorChartComponent implements OnInit, DoCheck {
         ]
       },
       options: {
+        animation: false,
         maintainAspectRatio: false,
         elements: { point: { radius: 0 } },
         scales: {

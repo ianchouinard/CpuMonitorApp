@@ -34,6 +34,7 @@ export class CpuChartComponent implements OnInit {
         ]
       },
       options: {
+        animation: false,
         maintainAspectRatio: false,
         elements: { point: { radius: 0 } },
         scales: {

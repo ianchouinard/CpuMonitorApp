@@ -5,10 +5,6 @@ const appRoutes: Routes = [
   {
     path: "",
     loadChildren: "./modules/dashboard/dashboard.module#DashboardModule"
-  },
-  {
-    path: "history",
-    loadChildren: "./modules/history/history.module#HistoryModule"
   }
 ];
 
