@@ -16,13 +16,11 @@ Front end is currently being made with angular (v6) and the backend/api layer is
 Pre Requisites
 - Node.js (v8 +)
 - Angular CLI
-- MySQL
 - Java (recommended v8 or v10)
 
 Running dev environemnt
 - Clone or download the repo.
 - Install gradle & maven dependencies for the java backend
-- Update the DB connection properties in application.properties (src/resources)
 - In the /appui directory, run "npm install" to install front end dependencies
 - To run the front end dev server, run "ng serve" from the app-ui directory and navigate to http://localhost:4200/
 - To build the prod front end, run "ng build --prod" from the app-ui directory. If the spring boot application is running, the prod front end will be available at http://localhost:8080/
