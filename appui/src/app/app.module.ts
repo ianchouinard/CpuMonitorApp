@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { MatToolbarModule, MatSidenav, MatSidenavModule, MatMenuModule, MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatSidenav, MatSidenavModule, MatMenuModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';

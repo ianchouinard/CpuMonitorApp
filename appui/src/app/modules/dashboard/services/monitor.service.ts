@@ -34,7 +34,7 @@ export class MonitorService {
     this.freeMemoryHistory.push(this.store.totalFreeMemory);
     this.totalMemoryHistory.push(this.store.totalMemory);
     this.timestampHistory.push(
-      this.datePipe.transform(this.store.timestamp)
+      this.datePipe.transform(this.store.timestamp, 'hh:mm:ss')
     );
   }
   

@@ -1,0 +1,15 @@
+
+.cpumonitor {
+  // Override global border so card header can have its own bg color
+  .mat-card {
+    padding: 0;
+
+    .mat-card-header {
+      padding: 24px 24px 8px 24px;
+    }
+
+    .dashboard-content {
+      padding: 24px;
+    }
+  }
+}
