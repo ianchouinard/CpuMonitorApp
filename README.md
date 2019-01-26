@@ -1,12 +1,15 @@
 # Cpu Monitor
 An in progress self hosted web application to show cpu and memory usage (that is available through the JVM) and record stats in real time.
 
+Example of app running on heroku 
+https://cpu-monitor-app.herokuapp.com/
+(note: app container my be asleep, page may take a moment to load)
+
 ## App Overview
 Front end is currently being made with angular (v6) and the backend/api layer is being built with Spring Boot and MySQL.
 
 ## To Do
-- On going development chores (include jUnit tests for the api. Complete unit karam/jasmine unit tests for the front end).
-- Service to monitor cpu & memory usage in the background and showing past usage in the app.
+- On going development chores (jUnit tests, etc).
 - GPU usage data?
 
 ### Screenshot of app (in progress)
