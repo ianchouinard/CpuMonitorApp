@@ -3,10 +3,10 @@ An in progress self hosted web application to show cpu and memory usage (that is
 
 Example of app running on heroku 
 https://cpu-monitor-app.herokuapp.com/
-(note: app container my be asleep, page may take a moment to load)
+(note: app container may be asleep, page will take a moment to load if thats the case)
 
 ## App Overview
-Front end is currently being made with angular (v6) and the backend/api layer is being built with Spring Boot and MySQL.
+Front end is currently being made with angular (v6) and the backend/api layer is being built with Spring Boot.
 
 ## To Do
 - On going development chores (jUnit tests, etc).
